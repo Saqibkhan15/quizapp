@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styless.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="timer" class="timer"></div>
+        <div id="questionCard" class="card">
+            <p id="question"></p>
+            <div class="options">
+                <label>
+                    <input onchange="enableBtn()" value="1" type="radio" name="answer">
+                    <span id="option1" class="option"></span>
+                </label>
+            </div>
+            <div class="options">
+                <label>
+                    <input onchange="enableBtn()" value="2" type="radio" name="answer">
+                    <span id="option2" class="option"></span>
+                </label>
+            </div>
+            <div class="options">
+                <label>
+                    <input onchange="enableBtn()" value="3" type="radio" name="answer">
+                    <span id="option3" class="option"></span>
+                </label>
+            </div>
+        </div>
+        <button id="btn" disabled onclick="nextQuestion()">Next</button>
+    </div>
+    <div id="result" class="hidden">
+        <h2>Quiz Results</h2>
+        <p id="score"></p>
+    </div>
+    <script src="quiz.js" defer></script>
+</body>
+</html>
